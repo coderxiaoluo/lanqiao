@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.item {
+  display: block;
+  width: 66px;
+  height: 66px;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+}
+
+[class$="box"] {
+  width: 204px;
+  height: 204px;
+  margin: 20px;
+  background-image: linear-gradient(rgb(252, 213, 136) 33.3%,
+      #fff493 0,
+      #fdf45d 66.6%,
+      #f8da47 0);
+  background-size: 6px 6px;
+}
+
+/* TODO：待补充代码 */
+
+
+/* 第一个 */
+#box1 {
+  /* 开启弹性盒子 */
+  display: flex;
+  /* 主轴方向排序 */
+  justify-content: center;
+  /* 侧轴方向排列*/
+  align-items: center;
+}
+
+/* 第二个 */
+#box2 {
+  display: flex;
+  /* 子元素靠边对齐 */
+  justify-content: space-between;
+  /* 侧轴方向排列*/
+  align-items: center;
+}
+#box2>.item:nth-child(1){
+  /*单独设置对齐方式 */
+  align-self: flex-start;
+}
+#box2>.item:nth-child(2){
+  align-self: flex-end;
+}
+
+/* 第三个 */
+/* 整体居中显示 */
+#box3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 单独给第一个和第三个item设置对齐 */
+#box3>.item:nth-child(1){
+    /*单独设置对齐方式 */
+    align-self: flex-start;
+}
+#box3>.item:nth-child(3){
+  /*单独设置对齐方式 */
+  align-self: flex-end;
+}
